@@ -1,9 +1,18 @@
 import React from "react";
+import './app.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+// Screens
+import SearchScreen from "screens/SearchScreen";
 
 function App() {
   return (
     <div className="App">
-      <h1>Cassovia Front-end assigment</h1>
+      <Router>
+        <Switch>
+          <Route path="/" component={SearchScreen} />
+        </Switch>
+      </Router>
     </div>
   );
 }

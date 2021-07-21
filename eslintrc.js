@@ -4,7 +4,8 @@ module.exports = {
     'airbnb/hooks',
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    "prettier/@typescript-eslint"
   ],
   plugins: ['react', '@typescript-eslint', 'jest'],
   env: {
@@ -16,7 +17,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: '@typescript-eslint/parser',
+  parser: 'prettier/@typescript-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
