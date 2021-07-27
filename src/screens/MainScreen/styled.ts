@@ -159,6 +159,7 @@ export const MainCardStyled = styled.div`
         color: #000000;
         display: flex;
         flex-direction: row;
+        gap: 5px;
 
         .temp-degrees {
           box-sizing: border-box;

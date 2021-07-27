@@ -73,6 +73,25 @@ function MainScreen(): ReactElement {
     };
   }, []);
 
+  // Quick error handler
+  if (
+    (!state.currentData ||
+      !state.forecastData ||
+      state.forecastData.length === 0) &&
+    state.isLoaded
+  ) {
+    return (
+      <MainScreenStyled>
+        <div className="graphic" />
+        <MainCardStyled>
+          <LoadingWrapper>
+            <h1>Something is wrong</h1>
+          </LoadingWrapper>
+        </MainCardStyled>
+      </MainScreenStyled>
+    );
+  }
+
   return (
     <MainScreenStyled>
       <div className="graphic" />
