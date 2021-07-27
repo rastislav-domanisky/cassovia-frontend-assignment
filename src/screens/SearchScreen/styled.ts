@@ -10,11 +10,13 @@ export const SearchScreenStyled = styled.div`
 
   .graphic {
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
+    background: red;
     width: 100%;
+    flex: 1;
+    z-index: -10;
+    background: url('/graphic.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 `;
 

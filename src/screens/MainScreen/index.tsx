@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import formatDateTime from 'utils/formatDateTime';
 import LoadingIndicator from 'components/LoadingIndicator';
 
-import { ReactComponent as BackgroundGraphic } from 'assets/graphic.svg';
 import { ReactComponent as PlaceIcon } from 'assets/place.svg';
 import { ReactComponent as SunnyIcon } from 'assets/Sunny.svg';
 import { ReactComponent as UpIcon } from 'assets/Up.svg';
@@ -68,7 +67,7 @@ function MainScreen(): ReactElement {
   useEffect(() => {
     const timer = setInterval(() => {
       setDate(new Date());
-    }, 1000);
+    }, 1000 * 60);
     return () => {
       clearInterval(timer);
     };
@@ -76,7 +75,7 @@ function MainScreen(): ReactElement {
 
   return (
     <MainScreenStyled>
-      <BackgroundGraphic className="graphic" />
+      <div className="graphic" />
       {state.isLoaded ? (
         <MainCardStyled>
           <div className="main-info">
@@ -172,7 +171,7 @@ function MainScreen(): ReactElement {
               </div>
             </div>
           </div>
-          <div className="main-foracast">
+          <div className="main-forecast">
             <div className="weather-row forecast-row">
               <div className="weather-row-item">
                 <RaisedItem>

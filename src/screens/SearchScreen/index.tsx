@@ -2,7 +2,6 @@ import React, { ReactElement, useState, useEffect } from 'react';
 import SearchInput from 'components/SearchInput';
 import LocationsList from 'components/LocationsList';
 import LoadingIndicator from 'components/LoadingIndicator';
-import { ReactComponent as BackgroundGraphic } from 'assets/graphic.svg';
 import { SearchScreenStyled, SearchCardStyled } from './styled';
 import {
   LocationListItemData,
@@ -45,7 +44,7 @@ function SearchScreen(): ReactElement {
 
   return (
     <SearchScreenStyled>
-      <BackgroundGraphic className="graphic" />
+      <div className="graphic" />
       <SearchCardStyled>
         <p className="search-card-title">Location</p>
         <div className="search-results-wrapper">

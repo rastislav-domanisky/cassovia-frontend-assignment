@@ -10,18 +10,19 @@ export const MainScreenStyled = styled.div`
 
   .graphic {
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
+    background: red;
     width: 100%;
+    flex: 1;
+    z-index: -10;
+    background: url('/graphic.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 `;
 
 export const MainCardStyled = styled.div`
   box-sizing: border-box;
   width: 100%;
-  height: 70vh;
   background: #ffffff;
   box-shadow: 0px -16px 40px rgba(0, 0, 0, 0.2);
   border-top-left-radius: 30px;
@@ -41,7 +42,7 @@ export const MainCardStyled = styled.div`
 
     .main-current-time {
       box-sizing: border-box;
-      height: 100%;
+      height: 45px;
       border-top-left-radius: 30px;
       font-family: Barlow;
       font-style: normal;
@@ -57,7 +58,7 @@ export const MainCardStyled = styled.div`
     .main-current-location {
       background: rgba(13, 159, 234, 0.08);
       box-sizing: border-box;
-      height: 100%;
+      height: 45px;
       width: 100%;
       border-top-right-radius: 30px;
       border-bottom-left-radius: 30px;
@@ -77,6 +78,11 @@ export const MainCardStyled = styled.div`
 
       a {
         color: #0da0ea;
+        flex: 1;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       &:hover {
@@ -98,15 +104,15 @@ export const MainCardStyled = styled.div`
 
   .main-current-weather {
     box-sizing: border-box;
+    flex: 1;
     width: 100%;
-    padding: 20px 10px;
   }
 
   .main-forecast {
     box-sizing: border-box;
     width: 100%;
+    padding: 20px 0px;
     flex: 1;
-    padding: 20px 10px;
   }
 
   .weather-row {
@@ -114,16 +120,16 @@ export const MainCardStyled = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    justify-content: space-evenly;
 
     .weather-row-item {
       box-sizing: border-box;
-      flex: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100px;
+      flex: 1;
 
       .weather-main-icon {
         box-sizing: border-box;
@@ -190,7 +196,6 @@ export const MainCardStyled = styled.div`
 
   .forecast-row {
     box-sizing: border-box;
-    padding: 20px 0;
   }
 `;
 
@@ -266,7 +271,7 @@ export const RaisedItem = styled.div`
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   height: 100px;
-  width: 98px;
+  width: 93px;
   display: flex;
   flex-direction: column;
   align-items: center;
